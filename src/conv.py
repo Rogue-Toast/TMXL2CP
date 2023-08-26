@@ -91,7 +91,7 @@ def main():
     newCPManifest["ContentPackFor"]["UniqueID"] = "Pathoschild.ContentPatcher"
     newCPManifest["UniqueID"] += ".TMXL2CP"
     if 'Dependencies' in newCPManifest:
-        newCPManifest["Dependencies"] = [x for x in newCPManifest["Dependencies"] if x["UniqueID"] not in ['Platonymous.Toolkit', 'Platonymous.TMXLoader']]
+        newCPManifest["Dependencies"] = [x for x in newCPManifest["Dependencies"] if x["UniqueID"] not in ['Platonymous.Toolkit', 'Platonymous.TMXLoader'] ]
 
     with open("CP\\manifest.json", "w") as f:
         json.dump(newCPManifest, f, indent=4)
